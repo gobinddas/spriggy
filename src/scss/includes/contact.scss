@@ -1,0 +1,95 @@
+.contact-section {
+    .container {
+        display: flex;
+        gap: 40px;
+
+        .contact-content {
+            width: 50%;
+
+            .des {
+                color: $tcolor;
+            }
+        }
+
+        .contact-form {
+            width: 50%;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+
+                    input,
+                    select,
+                    textarea {
+                        padding: 12px 15px;
+                        border: 1px solid #ccc;
+                        border-radius: 10px;
+                        font-size: 16px;
+                        outline: none;
+
+                        &:focus {
+                            border-color: #888;
+                        }
+                    }
+
+                    span {
+                        color: red;
+                        font-size: 0.85rem;
+                        margin-top: 5px;
+                    }
+                }
+
+                button {
+                    padding: 12px 20px;
+                    background-color: $light-secondaryColor;
+                    color: $black;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-size: 16px;
+
+                    &:hover {
+                        background-color: $secondaryColor;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .contact-section {
+        .container {
+            flex-direction: column;
+            gap: 30px;
+
+            .contact-content {
+                width: 100%;
+                text-align: center;
+                .section-heading{
+                    margin: auto;
+                }
+
+               
+            }
+
+            .contact-form {
+                width: 100%;
+
+                
+            }
+
+        }
+    }
+
+
+}

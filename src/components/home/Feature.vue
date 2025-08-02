@@ -1,5 +1,5 @@
 <template>
-  <section class="feature-section">
+  <section class="feature-section section-padding">
     <div class="container">
       <div class="wrapper">
         <h2 class="section-heading">Signature Dishes</h2>
