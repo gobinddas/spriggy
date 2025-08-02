@@ -30,15 +30,25 @@
     padding: 60px 0px;
   }
 
-  .section-heading{
-    background-color: $secondaryColor;
-    width: fit-content;
-    color: $black;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 5px 20px;
-    border-radius: 40px;
+  .section-heading {
+  background-color: $secondaryColor; // #dcdf88
+  width: fit-content;
+  color: $black;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 20px;
+  border-radius: 40px;
+  border: 2px solid $secondaryColor;
+
+  // Glowing effect
+  box-shadow: 0 0 8px 2px $secondaryColor, 0 0 2px 2px rgba(39, 39, 24, 0.205);
+  transition: box-shadow 0.3s ease;
+  &:hover{
+      box-shadow: 0 0 12px 3px $secondaryColor, 0 0 25px 6px rgba(51, 51, 31, 0.8);
+
   }
+}
+
 
   .section-title{
     font-size: 42px;
@@ -71,7 +81,7 @@
       padding: 0 15px;
     }
      .section-padding {
-    padding: 30px 0px;
+    padding: 50px 0px;
   }
 
 
