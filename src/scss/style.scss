@@ -1,0 +1,17 @@
+@import './variable.scss';
+@import './common.scss';
+
+// common comp 
+@import './includes/header.scss';
+@import './includes/footer.scss';
+
+// home comp 
+@import './includes/banner.scss';
+@import './includes/about.scss';
+@import './includes/feature.scss';
+@import './includes/contact.scss';
+@import './includes/appPromo.scss';
+
+// pages 
+
+@import './order.scss'
