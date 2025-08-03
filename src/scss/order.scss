@@ -1,4 +1,122 @@
-.product-page {
-  color: darkgreen;
-  padding: 120px 0px 80px 0px;
+.order-page {
+  padding: 100px 0px 0px 0px;
+
+  .order-content {
+    width: 100%;
+  }
+
+  .section-title {
+    text-align: center;
+    
+  }
+
+  .category-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    button {
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 25px;
+      background-color: #f2f2f2;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &.active {
+        background-color: $secondaryColor;
+        // color: $white;
+      }
+    }
+  }
+
+  .sort-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    label {
+      color: $white;
+    }
+
+    select {
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .product-img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .name{
+      font-size: 16px;
+     
+    }
+    .des{
+       padding: 12px 0px;
+    }
+
+    .price {
+      color: #888;
+      font-weight: bold;
+    }
+
+    .add-btn {
+      margin-top: 1rem;
+      background-color: $primaryColor;
+      color: $black;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #388e3c;
+      }
+    }
+  }
+
+  .load-more-container {
+    text-align: center;
+    margin-top: 2rem;
+
+    .load-more-btn {
+      background-color: $primaryColor;
+      color: $white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $secondaryColor;
+      }
+    }
+  }
 }

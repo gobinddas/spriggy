@@ -75,7 +75,7 @@ export default {
             const { name, email, phone, subject, message } = this.form;
             if (name && email && phone && subject && message && this.isValidPhone) {
                 alert("Form submitted successfully!");
-                // here you can send the form data to the server
+                
                 this.form = { name: '', email: '', phone: '', subject: '', message: '' };
                 this.submitted = false;
             }

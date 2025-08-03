@@ -1,9 +1,9 @@
-// src/router/index.js
+
 import { createRouter, createWebHistory } from 'vue-router';
 
-// Import pages
+
 import Home from '@/pages/Home.vue';
-import Order from '@/pages/Order.vue';
+import OrderPage from '@/pages/OrderPage.vue'; 
 
 const routes = [
   {
@@ -13,8 +13,8 @@ const routes = [
   },
   {
     path: '/order',
-    name: 'Order',
-    component: Order,
+    name: 'OrderPage', 
+    component: OrderPage,
   },
 ];
 
