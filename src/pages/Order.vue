@@ -1,7 +1,7 @@
 <!-- src/pages/Order.vue -->
 <template>
-  <div>
-    <h1>Order Page</h1>
+  <div class="product-page">
+    adsd
   </div>
 </template>
 
@@ -11,8 +11,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-h1 {
-  color: darkgreen;
-}
-</style>
+

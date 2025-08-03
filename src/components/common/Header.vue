@@ -1,31 +1,26 @@
 <template>
   <header class="header">
     <div class="container">
-      <!-- Brand image as a link -->
+      <!-- Brand Logo -->
       <div class="logo">
         <router-link to="/">
-          <img src="../../assets/images/brand1.png" alt="Brand Logo" />
+          <img src="@/assets/images/brand1.png" alt="Brand Logo" />
         </router-link>
-
       </div>
 
       <nav class="nav">
         <ul>
-          <!-- Cart icon alone -->
-        
-
-          <!-- Order Now button -->
+          <!-- Order Now -->
           <router-link to="/order" class="order-button">
-            
             Order Now
           </router-link>
-            <li>
-            <a href="/cart" class="cart-icon" aria-label="Cart">
+
+          <!-- Cart Icon with dynamic counter -->
+          <li>
+            <button class="cart-icon" aria-label="Cart" @click="toggleCart">
               <ShoppingCartIcon />
-
-              <span class="counter">0</span>
-
-            </a>
+              <span class="counter">{{ cart.items.length }}</span>
+            </button>
           </li>
         </ul>
       </nav>
@@ -34,6 +29,7 @@
 </template>
 
 <script>
+import { inject } from 'vue';
 import { ShoppingCartIcon } from 'lucide-vue-next';
 
 export default {
@@ -41,7 +37,14 @@ export default {
   components: {
     ShoppingCartIcon,
   },
+  setup() {
+    const cart = inject('cart');
+    const toggleCart = inject('toggleCart');
+
+    return {
+      cart,
+      toggleCart,
+    };
+  }
 };
 </script>
-
-

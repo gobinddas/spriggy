@@ -38,8 +38,8 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+import { foodItems } from '@/mock/foodItems';
 
-// Install required modules
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 export default {
@@ -48,59 +48,25 @@ export default {
     Swiper,
     SwiperSlide,
   },
+  inject: ['cart'], // ✅ Move inject here instead of importing from 'vue'
   data() {
     return {
-      products: [
-  {
-    id: 1,
-    name: "Spicy Chicken Burger",
-    description: "Juicy grilled chicken with fiery sauce, layered in a soft bun.",
-    price: 8.99,
-    image: require("@/assets/images/burger.png"),
-  },
-  {
-    id: 2,
-    name: "Crispy Baken Roll",
-    description: "Savory bacon wrapped in a crispy roll with smoky seasoning.",
-    price: 7.25,
-    image: require("@/assets/images/baken.png"),
-  },
-  {
-    id: 3,
-    name: "Creamy Pasta Bowl",
-    description: "Rich and creamy pasta tossed with herbs and melted cheese.",
-    price: 9.5,
-    image: require("@/assets/images/pasta.png"),
-  },
-  {
-    id: 4,
-    name: "Beef Bacon Stack",
-    description: "Tender beef slices with crispy bacon in a delicious layer.",
-    price: 10.75,
-    image: require("@/assets/images/beefbaken.png"),
-  },
-  {
-    id: 5,
-    name: "Fresh Green Salad",
-    description: "A refreshing mix of leafy greens, tomatoes, and citrus zest.",
-    price: 6.0,
-    image: require("@/assets/images/salad.png"),
-  },
-  {
-    id: 6,
-    name: "Roasted Veggie Mix",
-    description: "Oven-roasted vegetables seasoned with olive oil and herbs.",
-    price: 8.0,
-    image: require("@/assets/images/rostvegggies.png"),
-  },
-]
-
+      products: []
     };
+  },
+  mounted() {
+    this.products = foodItems.filter(item => item.featured);
   },
   methods: {
     addToCart(product) {
-      alert(`Added "${product.name}" to cart!`);
+      const found = this.cart.items.find(i => i.id === product.id);
+      if (found) {
+        found.quantity++;
+      } else {
+        this.cart.items.push({ ...product, quantity: 1 });
+      }
     },
   },
 };
 </script>
+
