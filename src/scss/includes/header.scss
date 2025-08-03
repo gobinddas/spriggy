@@ -39,6 +39,8 @@
     color: $primaryColor;
     transition: color 0.3s;
     position: relative;
+    background-color: transparent;
+    border: none;
     .counter{
       position: absolute;
       top: -5px;

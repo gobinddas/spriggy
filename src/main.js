@@ -29,3 +29,4 @@ function watchCart(cart) {
 
 app.provide('cart', cartState);
 app.use(router).mount('#app');
+
