@@ -34,10 +34,10 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
-import SwiperCore, { Navigation, Autoplay } from 'swiper'; // ✅ include Autoplay
+import SwiperCore, { Navigation, Autoplay } from 'swiper'; 
 import { Quote } from 'lucide-vue-next';
 
-SwiperCore.use([Navigation, Autoplay]); // ✅ register Autoplay
+SwiperCore.use([Navigation, Autoplay]); 
 
 export default {
     name: "TestimonialSection",

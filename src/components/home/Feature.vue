@@ -48,7 +48,7 @@ export default {
     Swiper,
     SwiperSlide,
   },
-  inject: ['cart'], // ✅ Move inject here instead of importing from 'vue'
+  inject: ['cart'], 
   data() {
     return {
       products: []

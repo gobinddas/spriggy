@@ -48,7 +48,7 @@
             ›
         </button>
 
-        <!-- Carousel indicators -->
+       
         <div class="indicators">
             <button v-for="(_, index) in images" :key="index" class="indicator"
                 :class="{ active: index === currentIndex }" @click="goToSlide(index)"

@@ -26,7 +26,7 @@
           </select>
         </div>
 
-        <!-- Product Grid -->
+       
         <div class="product-grid">
           <div
             v-for="(item) in visibleItems"

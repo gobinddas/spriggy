@@ -5,18 +5,18 @@ import './scss/style.scss';
 
 const app = createApp(App);
 
-// Load cart from localStorage (or empty array)
+// Load from local storage
 const storedCart = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 const cartState = reactive({
   items: storedCart
 });
 
-// ✅ Watch and save to localStorage whenever cart changes
+// save to local storage
 watchCart(cartState);
 
 function watchCart(cart) {
-  // Deep watcher with manual effect
+  // manual effect
   let stringify = JSON.stringify(cart.items);
   setInterval(() => {
     const newStringify = JSON.stringify(cart.items);
